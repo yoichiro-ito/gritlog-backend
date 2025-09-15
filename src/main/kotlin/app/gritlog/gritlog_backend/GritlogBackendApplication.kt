@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class GritlogBackendApplication
 
 fun main(args: Array<String>) {
-	runApplication<GritlogBackendApplication>(*args)
+    runApplication<GritlogBackendApplication>(*args)
 }
