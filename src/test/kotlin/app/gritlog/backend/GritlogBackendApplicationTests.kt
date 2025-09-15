@@ -1,4 +1,4 @@
-package app.gritlog.gritlog_backend
+package app.gritlog.backend
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
