@@ -1,4 +1,4 @@
-package app.gritlog.backend
+package app.gritlog
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
