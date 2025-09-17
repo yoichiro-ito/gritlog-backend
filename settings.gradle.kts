@@ -5,3 +5,4 @@ rootProject.name = "gritlog-backend"
 include("application")
 include("domain")
 include("presentation")
+include("infrastructure")

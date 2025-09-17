@@ -47,7 +47,7 @@ dependencies {
     implementation("org.flywaydb:flyway-mysql")
 
     // OpenAPI(Swagger UI)
-    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.8.11")
 
     // Kotlin
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
