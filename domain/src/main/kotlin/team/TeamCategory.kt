@@ -8,7 +8,7 @@ enum class TeamCategory: ValueObject {
     // 高校
     HIGH_SCHOOL,
     // 大学
-    UNIVERSITY,
+//    UNIVERSITY,
     // 一般・社会人
-    GENERAL
+//    GENERAL
 }
