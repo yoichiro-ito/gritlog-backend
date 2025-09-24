@@ -11,4 +11,5 @@ class Reflection(
     val evaluationComment: String,
     val isPublic: Boolean,
     val createdAt: LocalDateTime,
+    val updatedAt: LocalDateTime,
 ): DomainEntity<Long>(id)
