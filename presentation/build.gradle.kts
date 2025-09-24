@@ -38,3 +38,14 @@ kotlin {
 springBoot {
     mainClass.set("app.gritlog.GritlogBackendApplicationKt")
 }
+
+tasks.processResources {
+    from("../mysql/init") {
+        include("schema.sql")
+        into(".") // -> presentation/src/main/resources/schema.sql へ出力
+    }
+    from("src/main/resources/db") {
+        include("data.sql")
+        into(".")           // -> presentation/src/main/resources/data.sql
+    }
+}
