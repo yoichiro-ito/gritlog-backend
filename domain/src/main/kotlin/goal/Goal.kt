@@ -1,6 +1,7 @@
 package app.gritlog.goal
 
 import app.gritlog.DomainEntity
+import app.gritlog.goal.valueobject.Status
 
 class Goal(
     override var id: Long?,
@@ -10,7 +11,4 @@ class Goal(
     val subGoal1: SubGoal,
     val subGoal2: SubGoal,
     val subGoal3: SubGoal,
-    val actionplan1: String,
-    val actionplan2: String,
-    val actionplan3: String,
 ): DomainEntity<Long>(id)

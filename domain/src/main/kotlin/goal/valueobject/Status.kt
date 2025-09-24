@@ -1,4 +1,4 @@
-package app.gritlog.goal
+package app.gritlog.goal.valueobject
 
 enum class Status {
     // 作成中

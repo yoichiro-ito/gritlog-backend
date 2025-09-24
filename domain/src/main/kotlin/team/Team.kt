@@ -1,7 +1,7 @@
 package app.gritlog.team
 
 import app.gritlog.DomainEntity
-import app.gritlog.user.Sex
+import app.gritlog.user.valueobject.Sex
 
 class Team(
     override var id: Long?,

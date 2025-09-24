@@ -1,4 +1,4 @@
-package app.gritlog.goal
+package app.gritlog.goal.valueobject
 
 import app.gritlog.DomainEntity
 import java.time.LocalDateTime
