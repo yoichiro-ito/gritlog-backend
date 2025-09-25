@@ -13,6 +13,10 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     implementation(project(":application"))
     implementation(project(":domain"))
+
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    runtimeOnly("com.mysql:mysql-connector-j")
+
 }
 
 tasks.test {

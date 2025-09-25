@@ -1,3 +1,17 @@
+-- DROP TABLE
+-- 振り返り
+--DROP TABLE IF EXISTS reaction;
+DROP TABLE IF EXISTS comment;
+DROP TABLE IF EXISTS reflection;
+-- 目標
+DROP TABLE IF EXISTS action_plan;
+DROP TABLE IF EXISTS sub_goal;
+DROP TABLE IF EXISTS goal;
+-- アカウント
+DROP TABLE IF EXISTS account_role;
+DROP TABLE IF EXISTS role;
+DROP TABLE IF EXISTS account;
+
 -- db
 CREATE DATABASE IF NOT EXISTS gritlog
     CHARACTER SET utf8mb4
