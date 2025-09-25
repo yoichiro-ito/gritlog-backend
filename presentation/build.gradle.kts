@@ -24,6 +24,9 @@ dependencies {
 
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    runtimeOnly("com.mysql:mysql-connector-j")
+
     runtimeOnly(project(":infrastructure"))
 
 }
@@ -40,12 +43,8 @@ springBoot {
 }
 
 tasks.processResources {
-    from("../mysql/init") {
+    from("$rootDir/mysql/init") {
         include("schema.sql")
         into(".") // -> presentation/src/main/resources/schema.sql へ出力
-    }
-    from("src/main/resources/db") {
-        include("data.sql")
-        into(".")           // -> presentation/src/main/resources/data.sql
     }
 }
