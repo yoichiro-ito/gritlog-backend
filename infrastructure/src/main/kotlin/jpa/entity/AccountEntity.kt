@@ -69,4 +69,21 @@ class AccountEntity(
     @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     var accountRoles: MutableSet<AccountRoleEntity> = mutableSetOf()
 
+    internal fun toDto() = AccountDto(
+        id = requireNotNull(id),
+        nameKanjiKana = nameKanjiKana,
+        nameKana = nameKana,
+        nameAlphabet = nameAlphabet,
+        loginId = loginId,
+        email = email,
+        passwordAttempts = passwordAttempts,
+        loginFailureAt = loginFailureAt,
+        lockedAt = lockedAt,
+        changedPasswordAt = changedPasswordAt,
+        deletedAt = deletedAt,
+        createdBy = createdBy,
+        updatedBy = updatedBy,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

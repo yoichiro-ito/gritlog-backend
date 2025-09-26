@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation(platform("org.springframework.boot:spring-boot-dependencies:3.4.9"))
+
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     implementation(project(":domain"))
 }

@@ -1,6 +1,7 @@
 package jpa.entity
 
 import jakarta.persistence.*
+import reflection.ReflectionDto
 import java.time.LocalDateTime
 
 @Entity
@@ -35,4 +36,15 @@ class ReflectionEntity(
 ) {
     @OneToMany(mappedBy = "reflection", fetch = FetchType.LAZY)
     var comments: MutableList<CommentEntity> = mutableListOf()
+
+    internal fun toDto() = ReflectionDto(
+        id = requireNotNull(id),
+        accountId = requireNotNull(account.id),
+        subGoalId = requireNotNull(subGoal.id),
+        evaluationScore = evaluationScore,
+        comment = comment,
+        isPublic = isPublic,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

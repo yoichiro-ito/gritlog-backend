@@ -1,5 +1,6 @@
 package jpa.entity
 
+import goal.ActionPlanDto
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
@@ -28,4 +29,14 @@ class ActionPlanEntity(
 
     @Column(name = "updated_at", insertable = false, updatable = false)
     var updatedAt: LocalDateTime? = null
-)
+) {
+    internal fun toDto() = ActionPlanDto(
+        id = requireNotNull(id),
+        subGoalId = requireNotNull(subGoal.id),
+        planWhen = planWhen,
+        planWhat = planWhat,
+        planHow = planHow,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
+}

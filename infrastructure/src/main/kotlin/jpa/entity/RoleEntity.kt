@@ -1,5 +1,6 @@
 package jpa.entity
 
+import account.RoleDto
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
@@ -24,4 +25,12 @@ class RoleEntity(
 ) {
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
     var accountRoles: MutableSet<AccountRoleEntity> = mutableSetOf()
+
+    internal fun toDto() = RoleDto(
+        id = requireNotNull(id),
+        name = name,
+        code = code,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

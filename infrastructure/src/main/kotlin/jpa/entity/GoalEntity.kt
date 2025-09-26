@@ -1,5 +1,6 @@
 package jpa.entity
 
+import goal.GoalDto
 import jakarta.persistence.*
 import java.time.LocalDate
 import java.time.LocalDateTime
@@ -38,4 +39,16 @@ class GoalEntity(
 ) {
     @OneToMany(mappedBy = "goal", fetch = FetchType.LAZY, cascade = [])
     var subGoals: MutableList<SubGoalEntity> = mutableListOf()
+
+    internal fun toDto() = GoalDto(
+        id = requireNotNull(id),
+        accountId = requireNotNull(account.id),
+        status = status,
+        mainGoalTitle = mainGoalTitle,
+        mainGoalDescription = mainGoalDescription,
+        startDate = startDate,
+        endDate = endDate,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

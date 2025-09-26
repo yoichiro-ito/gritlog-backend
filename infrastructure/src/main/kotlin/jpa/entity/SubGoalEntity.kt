@@ -1,5 +1,6 @@
 package jpa.entity
 
+import goal.SubGoalDto
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
@@ -37,4 +38,15 @@ class SubGoalEntity(
 
     @OneToMany(mappedBy = "subGoal", fetch = FetchType.LAZY)
     var reflections: MutableList<ReflectionEntity> = mutableListOf()
+
+    internal fun toDto() = SubGoalDto(
+        id = requireNotNull(id),
+        goalId = requireNotNull(goal.id),
+        category = category,
+        title = title,
+        description = description,
+        orderNo = orderNo,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

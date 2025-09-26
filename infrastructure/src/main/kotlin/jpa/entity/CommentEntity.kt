@@ -1,6 +1,7 @@
 package jpa.entity
 
 import jakarta.persistence.*
+import reflection.CommentDto
 import java.time.LocalDateTime
 
 @Entity
@@ -33,4 +34,14 @@ class CommentEntity(
 ) {
     @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
     var children: MutableList<CommentEntity> = mutableListOf()
+
+    internal fun toDto() = CommentDto(
+        id = requireNotNull(id),
+        reflectionId = requireNotNull(reflection.id),
+        authorAccountId = requireNotNull(authorAccount.id),
+        parentCommentId = parent?.id,
+        body = body,
+        createdAt = createdAt,
+        updatedAt = updatedAt
+    )
 }

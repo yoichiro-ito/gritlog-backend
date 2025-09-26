@@ -1,5 +1,6 @@
 package jpa.entity
 
+import account.AccountRoleDto
 import jakarta.persistence.*
 import java.io.Serializable
 
@@ -19,7 +20,12 @@ class AccountRoleEntity(
     @MapsId("roleId")
     @JoinColumn(name = "role_id", nullable = false)
     var role: RoleEntity
-)
+) {
+    internal fun toDto() = AccountRoleDto(
+        accountId = requireNotNull(id.accountId),
+        roleId = requireNotNull(id.roleId)
+    )
+}
 
 @Embeddable
 data class AccountRoleId(
