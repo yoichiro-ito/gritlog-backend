@@ -9,5 +9,5 @@ data class CommentDto(
     val parentCommentId: Long?,
     val body: String,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

@@ -8,5 +8,5 @@ data class ReflectionSearchForm(
     val minScore: Int? = null,
     val maxScore: Int? = null,
     val from: LocalDateTime? = null,
-    val to: LocalDateTime? = null
+    val to: LocalDateTime? = null,
 )

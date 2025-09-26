@@ -10,5 +10,5 @@ data class ReflectionDto(
     val comment: String?,
     val isPublic: Boolean,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

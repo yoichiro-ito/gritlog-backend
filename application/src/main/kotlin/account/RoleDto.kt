@@ -7,5 +7,5 @@ data class RoleDto(
     val name: String,
     val code: String,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

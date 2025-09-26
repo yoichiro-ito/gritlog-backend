@@ -28,7 +28,6 @@ dependencies {
     kapt("com.querydsl:querydsl-apt:$qdsl:jakarta")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
-
 }
 
 tasks.test {

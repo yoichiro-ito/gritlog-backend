@@ -17,5 +17,5 @@ data class AccountDto(
     val createdBy: Long?,
     val updatedBy: Long?,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

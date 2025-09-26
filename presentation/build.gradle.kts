@@ -28,7 +28,6 @@ dependencies {
     runtimeOnly("com.mysql:mysql-connector-j")
 
     runtimeOnly(project(":infrastructure"))
-
 }
 
 tasks.test {

@@ -2,7 +2,7 @@ package app.gritlog.user.valueobject
 
 import app.gritlog.ValueObject
 
-enum class Position: ValueObject {
+enum class Position : ValueObject {
     GOAL_KEEPER,
     PIVOT,
     LEFT_WING,

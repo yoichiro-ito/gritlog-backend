@@ -12,4 +12,4 @@ class Comment(
     val createdAt: LocalDateTime,
     val createdBy: Long,
     val isDeleted: Boolean,
-): DomainEntity<Long>(id)
+) : DomainEntity<Long>(id)

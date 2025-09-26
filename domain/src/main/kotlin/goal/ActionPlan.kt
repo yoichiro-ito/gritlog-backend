@@ -7,7 +7,5 @@ class ActionPlan(
     val subGoalId: Long,
     val planWhen: String,
     val planWhat: String,
-    val planHow: String
-): DomainEntity<Long>(id) {
-
-}
+    val planHow: String,
+) : DomainEntity<Long>(id)

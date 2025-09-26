@@ -10,13 +10,16 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class AccountRoleRepository(
-    private val query: JPAQueryFactory
+    private val query: JPAQueryFactory,
 ) : IAccountRoleRepository {
-    override fun findByIds(accountId: Long, roleId: Long): AccountRoleDto? =
+    override fun findByIds(
+        accountId: Long,
+        roleId: Long,
+    ): AccountRoleDto? =
         query.selectFrom(accountRoleEntity)
             .where(
                 accountRoleEntity.id.accountId.eq(accountId)
-                    .and(accountRoleEntity.id.roleId.eq(roleId))
+                    .and(accountRoleEntity.id.roleId.eq(roleId)),
             )
             .fetchOne()
             ?.toDto()

@@ -2,7 +2,15 @@ package app.gritlog.user
 
 import app.gritlog.DomainEntity
 import app.gritlog.common.valueobject.Sex
-import app.gritlog.user.valueobject.*
+import app.gritlog.user.valueobject.AlphabetName
+import app.gritlog.user.valueobject.DominantArm
+import app.gritlog.user.valueobject.Email
+import app.gritlog.user.valueobject.Grade
+import app.gritlog.user.valueobject.KanaName
+import app.gritlog.user.valueobject.KanjiKanaName
+import app.gritlog.user.valueobject.LoginId
+import app.gritlog.user.valueobject.Position
+import app.gritlog.user.valueobject.Role
 import java.time.LocalDateTime
 
 class Player(
@@ -25,5 +33,4 @@ class Player(
     val dominantArm: DominantArm,
     val height: Int?,
     val weight: Int?,
-    ) :DomainEntity<Int>(id) , Account {
-}
+) : DomainEntity<Int>(id), Account

@@ -9,5 +9,4 @@ class SubGoal(
     val goalCategory: GoalCategory,
     val content: String,
     val actionPlan: ActionPlan,
-): DomainEntity<Long>(id) {
-}
+) : DomainEntity<Long>(id)

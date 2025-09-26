@@ -8,10 +8,9 @@ import reflection.ICommentRepository
 
 @Repository
 class CommentRepository(
-    private val query: JPAQueryFactory
+    private val query: JPAQueryFactory,
 ) : ICommentRepository {
-    override fun findById(id: Long): CommentDto? =
-        query.selectFrom(commentEntity).where(commentEntity.id.eq(id)).fetchOne()?.toDto()
+    override fun findById(id: Long): CommentDto? = query.selectFrom(commentEntity).where(commentEntity.id.eq(id)).fetchOne()?.toDto()
 
     override fun findAllByReflection(reflectionId: Long): List<CommentDto> =
         query.selectFrom(commentEntity)

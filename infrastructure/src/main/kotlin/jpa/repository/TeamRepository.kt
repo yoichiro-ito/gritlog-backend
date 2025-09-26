@@ -6,10 +6,8 @@ import team.ITeamRepository
 import team.TeamDto
 
 class TeamRepository(
-    private val query: JPAQueryFactory
-): ITeamRepository {
-
-
+    private val query: JPAQueryFactory,
+) : ITeamRepository {
     override fun findById(id: Long): TeamDto? =
         query.selectFrom(QTeamEntity.teamEntity)
             .where(QTeamEntity.teamEntity.id.eq(id))

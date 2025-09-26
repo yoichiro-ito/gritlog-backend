@@ -11,4 +11,4 @@ class Goal(
     val subGoal1: SubGoal,
     val subGoal2: SubGoal,
     val subGoal3: SubGoal,
-): DomainEntity<Long>(id)
+) : DomainEntity<Long>(id)

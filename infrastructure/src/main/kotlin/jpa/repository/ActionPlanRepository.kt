@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class ActionPlanRepository(
-    private val query: JPAQueryFactory
+    private val query: JPAQueryFactory,
 ) : IActionPlanRepository {
     override fun findById(id: Long): ActionPlanDto? =
         query.selectFrom(actionPlanEntity).where(actionPlanEntity.id.eq(id)).fetchOne()?.toDto()

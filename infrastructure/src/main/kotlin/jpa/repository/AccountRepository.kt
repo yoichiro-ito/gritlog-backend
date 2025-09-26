@@ -8,9 +8,8 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class AccountRepository(
-    private val query: JPAQueryFactory
+    private val query: JPAQueryFactory,
 ) : IAccountRepository {
-
     override fun findById(id: Long): AccountDto? =
         query.selectFrom(accountEntity)
             .where(accountEntity.id.eq(id))
@@ -29,6 +28,4 @@ class AccountRepository(
             .limit(limit)
             .fetch()
             .map { it.toDto() }
-
-
 }

@@ -7,6 +7,16 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint") version "12.1.1"
 }
 
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
+
+// //    // 最低限の動作確認用設定（任意）
+// //    configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+// //        version.set("1.3.1")           // ktlint 本体
+// //        ignoreFailures.set(false)
+//    }
+}
+
 group = "app.gritlog"
 version = "0.0.1-SNAPSHOT"
 description = "GritLog Backend"

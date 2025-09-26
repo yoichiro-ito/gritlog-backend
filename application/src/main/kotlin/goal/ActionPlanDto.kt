@@ -9,5 +9,5 @@ data class ActionPlanDto(
     val planWhat: String,
     val planHow: String,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

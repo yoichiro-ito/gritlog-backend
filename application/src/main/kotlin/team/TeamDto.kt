@@ -2,7 +2,6 @@ package team
 
 import java.time.LocalDateTime
 
-
 data class TeamDto(
     val id: Long?,
     val teamName: String,

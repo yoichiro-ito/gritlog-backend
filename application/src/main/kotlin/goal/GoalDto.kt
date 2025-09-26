@@ -3,7 +3,6 @@ package goal
 import java.time.LocalDate
 import java.time.LocalDateTime
 
-
 data class GoalDto(
     val id: Long,
     val accountId: Long,
@@ -13,5 +12,5 @@ data class GoalDto(
     val startDate: LocalDate?,
     val endDate: LocalDate?,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

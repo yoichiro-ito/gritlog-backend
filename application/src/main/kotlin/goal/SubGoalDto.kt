@@ -10,5 +10,5 @@ data class SubGoalDto(
     val description: String?,
     val orderNo: Int,
     val createdAt: LocalDateTime?,
-    val updatedAt: LocalDateTime?
+    val updatedAt: LocalDateTime?,
 )

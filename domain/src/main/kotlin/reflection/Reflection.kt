@@ -12,4 +12,4 @@ class Reflection(
     val isPublic: Boolean,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime,
-): DomainEntity<Long>(id)
+) : DomainEntity<Long>(id)
