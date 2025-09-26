@@ -1,3 +1,5 @@
+package jpa.repository
+
 import com.querydsl.jpa.impl.JPAQueryFactory
 import goal.ISubGoalRepository
 import goal.SubGoalDto

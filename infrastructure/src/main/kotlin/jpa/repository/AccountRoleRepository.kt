@@ -1,5 +1,4 @@
-// infrastructure/jpa/repository/AccountRoleRepository.kt
-package app.gritlog.infrastructure.jpa.repository
+package jpa.repository
 
 import account.AccountRoleDto
 import account.IAccountRoleRepository

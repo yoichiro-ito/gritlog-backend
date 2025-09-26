@@ -3,8 +3,7 @@ package jpa.repository
 import account.AccountDto
 import account.IAccountRepository
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.AccountEntity
-import jpa.entity.QAccountEntity
+import jpa.entity.QAccountEntity.accountEntity
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -12,8 +11,6 @@ class AccountRepository(
     private val query: JPAQueryFactory
 ) : IAccountRepository {
 
-
-    private val accountEntity = QAccountEntity.accountEntity
     override fun findById(id: Long): AccountDto? =
         query.selectFrom(accountEntity)
             .where(accountEntity.id.eq(id))
