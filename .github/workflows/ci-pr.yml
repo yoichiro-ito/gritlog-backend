@@ -1,0 +1,33 @@
+name: PR - Lint & Test
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Verify Wrapper
+        run: ./gradlew wrapper --gradle-version
+
+      # PRは自動整形せずに「落として気付かせる」方が安全
+      - name: ktlintCheck
+        run: ./gradlew ktlintCheck --no-daemon
+
+      - name: Unit Test
+        run: ./gradlew test --no-daemon
