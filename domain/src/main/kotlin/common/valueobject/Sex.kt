@@ -1,4 +1,4 @@
-package app.gritlog.user.valueobject
+package app.gritlog.common.valueobject
 
 import app.gritlog.ValueObject
 

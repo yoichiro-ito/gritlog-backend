@@ -1,6 +1,7 @@
 package app.gritlog.user
 
 import app.gritlog.DomainEntity
+import app.gritlog.common.valueobject.Sex
 import app.gritlog.user.valueobject.*
 import java.time.LocalDateTime
 
