@@ -15,7 +15,7 @@
 
 ### ローカル起動
 
-` ./gradlew :presentation:bootRun --args="--spring.profiles.active=local"`
+` ./gradlew :presentation:bootRun`
 
 #### AdminerでローカルのDBを確認
 
