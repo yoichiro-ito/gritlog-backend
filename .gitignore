@@ -1,0 +1,25 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+# 共有したい場合は以下を除外解除
+# !.idea/codeStyles/
+# !.idea/runConfigurations/
+# !.idea/jarRepositories.xml
+
+# Gradle
+.gradle/
+build/
+out/
+
+# Logs
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+
+# Kotlin / Java
+*.class
+*.jar
+*.war
+*.ear
