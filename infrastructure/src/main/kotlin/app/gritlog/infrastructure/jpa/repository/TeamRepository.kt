@@ -3,8 +3,8 @@ package app.gritlog.infrastructure.jpa.repository
 import app.gritlog.application.ITeamRepository
 import app.gritlog.application.TeamDto
 import app.gritlog.application.TeamSearchForm
+import app.gritlog.infrastructure.jpa.entity.QTeamEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QTeamEntity
 
 class TeamRepository(
     private val query: JPAQueryFactory,

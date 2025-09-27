@@ -1,7 +1,7 @@
 package app.gritlog.infrastructure.jpa.repository
 
+import app.gritlog.infrastructure.jpa.entity.QRoleEntity.roleEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QRoleEntity.roleEntity
 import org.springframework.stereotype.Repository
 
 @Repository

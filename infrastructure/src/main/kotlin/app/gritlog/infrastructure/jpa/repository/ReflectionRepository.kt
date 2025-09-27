@@ -3,9 +3,9 @@ package app.gritlog.infrastructure.jpa.repository
 import app.gritlog.application.reflection.IReflectionRepository
 import app.gritlog.application.reflection.ReflectionDto
 import app.gritlog.application.reflection.ReflectionSearchForm
+import app.gritlog.infrastructure.jpa.entity.QReflectionEntity.reflectionEntity
 import com.querydsl.core.types.dsl.BooleanExpression
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QReflectionEntity.reflectionEntity
 import org.springframework.stereotype.Repository
 
 @Repository

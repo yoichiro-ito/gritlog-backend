@@ -2,8 +2,8 @@ package app.gritlog.infrastructure.jpa.repository
 
 import app.gritlog.application.goal.ISubGoalRepository
 import app.gritlog.application.goal.SubGoalDto
+import app.gritlog.infrastructure.jpa.entity.QSubGoalEntity.subGoalEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QSubGoalEntity.subGoalEntity
 import org.springframework.stereotype.Repository
 
 @Repository

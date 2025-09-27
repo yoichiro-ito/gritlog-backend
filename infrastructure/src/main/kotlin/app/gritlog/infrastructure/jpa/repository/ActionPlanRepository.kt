@@ -2,8 +2,8 @@ package app.gritlog.infrastructure.jpa.repository
 
 import app.gritlog.application.goal.ActionPlanDto
 import app.gritlog.application.goal.IActionPlanRepository
+import app.gritlog.infrastructure.jpa.entity.QActionPlanEntity.actionPlanEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QActionPlanEntity.actionPlanEntity
 import org.springframework.stereotype.Repository
 
 @Repository

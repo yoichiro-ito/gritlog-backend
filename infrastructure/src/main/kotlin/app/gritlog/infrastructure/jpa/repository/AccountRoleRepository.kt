@@ -1,9 +1,9 @@
 package app.gritlog.infrastructure.jpa.repository
 
 import app.gritlog.application.account.IAccountRoleRepository
+import app.gritlog.infrastructure.jpa.entity.QAccountRoleEntity.accountRoleEntity
+import app.gritlog.infrastructure.jpa.entity.QRoleEntity.roleEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QAccountRoleEntity.accountRoleEntity
-import jpa.entity.QRoleEntity.roleEntity
 import org.springframework.stereotype.Repository
 
 @Repository

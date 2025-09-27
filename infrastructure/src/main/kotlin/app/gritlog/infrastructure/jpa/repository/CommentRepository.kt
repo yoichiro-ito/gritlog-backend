@@ -1,8 +1,8 @@
 package app.gritlog.infrastructure.jpa.repository
 
 import app.gritlog.application.reflection.ICommentRepository
+import app.gritlog.infrastructure.jpa.entity.QCommentEntity.commentEntity
 import com.querydsl.jpa.impl.JPAQueryFactory
-import jpa.entity.QCommentEntity.commentEntity
 import org.springframework.stereotype.Repository
 
 @Repository
