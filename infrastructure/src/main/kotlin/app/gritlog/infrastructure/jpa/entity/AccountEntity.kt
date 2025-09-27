@@ -1,18 +1,20 @@
 package app.gritlog.infrastructure.jpa.entity
 
 import app.gritlog.application.account.AccountDto
+import jakarta.persistence.CascadeType
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.FetchType
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
 import jakarta.persistence.OneToMany
 import jakarta.persistence.Table
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "app/gritlog/application/account")
+@Table(name = "account")
 class AccountEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -50,13 +52,14 @@ class AccountEntity(
     @Column(name = "updated_at", insertable = false, updatable = false)
     var updatedAt: LocalDateTime? = null,
 ) {
-    @OneToMany(mappedBy = "app/gritlog/application/account", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     var goals: MutableList<GoalEntity> = mutableListOf()
 
-    @OneToMany(mappedBy = "app/gritlog/application/account", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "account", fetch = FetchType.LAZY)
     var reflections: MutableList<ReflectionEntity> = mutableListOf()
 
-    @OneToMany(mappedBy = "app/gritlog/application/account", fetch = FetchType.LAZY)
+    @OneToMany(cascade = [CascadeType.ALL], orphanRemoval = true)
+    @JoinColumn(name = "account_id")
     var accountRoles: MutableSet<AccountRoleEntity> = mutableSetOf()
 
     internal fun toDto() =

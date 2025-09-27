@@ -15,7 +15,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "app/gritlog/application/goal")
+@Table(name = "goal")
 class GoalEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,7 +38,7 @@ class GoalEntity(
     @Column(name = "updated_at", insertable = false, updatable = false)
     var updatedAt: LocalDateTime? = null,
 ) {
-    @OneToMany(mappedBy = "app/gritlog/application/goal", fetch = FetchType.LAZY, cascade = [])
+    @OneToMany(mappedBy = "goal", fetch = FetchType.LAZY, cascade = [])
     var subGoals: MutableList<SubGoalEntity> = mutableListOf()
 
     internal fun toDto() =

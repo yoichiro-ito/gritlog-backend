@@ -14,7 +14,7 @@ import jakarta.persistence.Table
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "app/gritlog/application/reflection")
+@Table(name = "reflection")
 class ReflectionEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,7 +36,7 @@ class ReflectionEntity(
     @Column(name = "updated_at", insertable = false, updatable = false)
     var updatedAt: LocalDateTime? = null,
 ) {
-    @OneToMany(mappedBy = "app/gritlog/application/reflection", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "reflection", fetch = FetchType.LAZY)
     var comments: MutableList<CommentEntity> = mutableListOf()
 
     internal fun toDto() =

@@ -10,7 +10,7 @@ import jakarta.persistence.Table
 import java.time.LocalDateTime
 
 @Entity
-@Table(name = "app/gritlog/application/team")
+@Table(name = "team")
 class TeamEntity(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
