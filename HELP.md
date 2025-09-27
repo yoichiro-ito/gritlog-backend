@@ -2,7 +2,7 @@
 The following was discovered as part of building this project:
 
 * The JVM level was changed from '24' to '21' as the Kotlin version does not support Java 24 yet.
-* The original package name 'app.gritlog.gritlog-backend' is invalid and this project uses 'app.gritlog.backend' instead.
+* The original package name 'app.gritlog.gritlog-backend' is invalid and this project uses 'app.gritlog.presentation' instead.
 
 # Getting Started
 
