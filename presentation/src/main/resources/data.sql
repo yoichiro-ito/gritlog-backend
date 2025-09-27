@@ -1,5 +1,5 @@
 -- アカウント
-INSERT INTO team (id, team_name, sex, team_category, representive_id, players_count, created_at, updated_at) VALUES
+INSERT INTO team (id, team_name, sex, team_category, representative_id, players_count, created_at, updated_at) VALUES
  (1, 'スプリントAチーム', 'MALE', 'SCHOOL', 2, 12, NOW(), NOW()),
  (2, '育成Bチーム', 'FEMALE', 'CLUB', 2, 8, NOW(), NOW());
 

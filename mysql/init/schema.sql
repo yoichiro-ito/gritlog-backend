@@ -25,11 +25,11 @@ CREATE TABLE team (
  team_name VARCHAR(100) NOT NULL,
  sex VARCHAR(16) NOT NULL,
  team_category VARCHAR(32) NOT NULL,
- representive_id BIGINT NOT NULL,
+ representative_id BIGINT NOT NULL,
  players_count INT NOT NULL DEFAULT 0,
  created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
  updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
- CONSTRAINT fk_team_representive FOREIGN KEY (representive_id) REFERENCES account(id)
+ CONSTRAINT fk_team_representative FOREIGN KEY (representative_id) REFERENCES account(id)
 ) ENGINE=InnoDB;
 
 CREATE TABLE account (
