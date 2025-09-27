@@ -23,7 +23,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Verify Wrapper
-        run: ./gradlew wrapper --gradle-version
+        run: ./gradlew wrapper --gradle-version=8.14.3 --distribution-type=bin
 
       # PRは自動整形せずに「落として気付かせる」方が安全
       - name: ktlintCheck
