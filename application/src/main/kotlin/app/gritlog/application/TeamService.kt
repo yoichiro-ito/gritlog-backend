@@ -47,7 +47,7 @@ class TeamService(
                 representativeId = form.representativeId,
                 playersCount = form.playersCount ?: 0,
                 createdAt = LocalDateTime.now(),
-                updatedAt = LocalDateTime.now()
+                updatedAt = LocalDateTime.now(),
             )
         return teamRepository.insert(newDto)
     }
