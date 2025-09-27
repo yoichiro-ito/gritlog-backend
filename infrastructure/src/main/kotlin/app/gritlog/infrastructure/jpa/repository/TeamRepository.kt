@@ -37,7 +37,12 @@ class TeamRepository(
         TODO("Not yet implemented")
     }
 
-    override fun existsByUniqueKey(teamName: String, teamCategory: Any, sex: Any?, excludeId: Long?): Boolean {
+    override fun existsByUniqueKey(
+        teamName: String,
+        teamCategory: Any,
+        sex: Any?,
+        excludeId: Long?,
+    ): Boolean {
         TODO("Not yet implemented")
     }
 }
